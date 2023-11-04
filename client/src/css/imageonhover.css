@@ -1,0 +1,37 @@
+.image-zoom {
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.image-zoom img {
+  transition: transform 0.5s; /* Smooth transition for zoom effect */
+}
+
+.image-zoom:hover img {
+  transform: scale(1.2); /* Adjust the scale to control the zoom level */
+}
+
+#projectbox{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+@media screen and (max-width:767px) {
+  #projectbox{
+  
+    grid-template-columns: repeat(1,1fr);
+ 
+  }
+}
+.image-tag {
+  width: auto;
+  position: absolute;
+  top: 10%; /* Adjust as needed */
+  right: 5px; /* Adjust the distance from the right side */
+  transform: translateY(-50%); /* Center the text vertically */
+  background: rgba(0, 0, 0, 0.7); /* Background color */
+  color: #fff; /* Text color */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Rounded corners */
+}
