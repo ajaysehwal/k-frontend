@@ -1,16 +1,11 @@
-// import './App.css'
 import "./css/bootstrap.min.css";
 import "./css/style.css";
 import Index from './pages';
 import { Routes, Route } from "react-router-dom"
 import Navbar from './components/home/Navbar';
-import Topbar from './components/home/Tobbar';
-// import Blog from "./components/home/Blog";
 import About from "./components/home/About";
 import Contact from "./components/home/contact";
 import Project from "./components/home/Project";
-// import Services from './components/home/Services';
-import Footer from "./components/home/footer";
 import { Suspense } from "react";
 import { Loader } from "./components/Loader"
 import { useEffect, useState } from "react";
@@ -39,7 +34,7 @@ function App() {
  
   return loading ? <Loader /> : (
     <>
-      <Topbar />
+     
       <Navbar />
       <Routes>
         <Route path='/' element={
@@ -62,11 +57,6 @@ function App() {
            <GalleryComponent/>
           </Suspense>
         } />
-        {/* <Route path='/blogs' element={commonload?<CommonLoader/>:
-          <Suspense fallback={<CommonLoader />}>
-            <Blog />
-          </Suspense>
-        } /> */}
         <Route path='/contact' element={commonload?<CommonLoader/>:
           <Suspense fallback={<CommonLoader />}>
             <Contact />
@@ -80,7 +70,7 @@ function App() {
         } />
       
       </Routes>
-      <Footer />
+     
 
     </>
   )

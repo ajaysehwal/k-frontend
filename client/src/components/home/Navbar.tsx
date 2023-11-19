@@ -28,7 +28,7 @@ export default function Navbar(){
    
     return(
         <>
-           <div className="container-fluid" style={{background:scrolled?"rgb(24,66,182)":path=='/'?'transparent':"rgb(24,66,182)",position:"fixed",width:'100%',top:scrolled?"0%":path=='/'?"8%":"6%",zIndex:999,transition:"0.3s ease"}} >
+           <div className="container-fluid" style={{background:scrolled?"rgb(24,66,182)":path=='/'?'transparent':"rgb(24,66,182)",position:"fixed",width:'100%',top:scrolled?"0%":path=='/'?"1%":"0%",zIndex:999,transition:"0.3s ease"}} >
             <div className="container">
                 <nav className="navbar navbar-dark navbar-expand-lg py-0">
                     <a href="/" className="navbar-brand">

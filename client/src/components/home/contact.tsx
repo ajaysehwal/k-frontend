@@ -1,33 +1,33 @@
 import "../../css/copyclip.css"
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer,toast } from "react-toastify";
-import {EmailService} from "../Secret/emailservices";
+import { ToastContainer, toast } from "react-toastify";
+import { EmailService } from "../Secret/emailservices";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
-    const [btnload,setbtnload]=React.useState(false);
-    const emailkeys=new EmailService();
-    const ToastS=(Message:string)=>toast.success(Message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        });
-        const ToastE=(Message:string)=>toast.error(Message, {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
+  const [btnload, setbtnload] = React.useState(false);
+  const emailkeys = new EmailService();
+  const ToastS = (Message: string) => toast.success(Message, {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+  const ToastE = (Message: string) => toast.error(Message, {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
   const copyEmail = () => {
     const email = "dreamdesignarchitects.here@gmail.com";
     navigator.clipboard
@@ -40,10 +40,10 @@ export default function Contact() {
       });
   };
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const form:any = useRef();
+  const form: any = useRef();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const sendEmail = (e:any) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
     setbtnload(true);
     emailjs.sendForm(emailkeys.ServiceID(), emailkeys.TemplateID(), form.current, emailkeys.PublicKey())
@@ -59,7 +59,7 @@ export default function Contact() {
 
   return (
     <div>
-        <ToastContainer/>
+      <ToastContainer />
       <div className="container-fluid py-5 mb-5" style={{ marginTop: "50px" }}>
         <div className="container">
           <div
@@ -132,16 +132,16 @@ export default function Contact() {
                   </div>
                   <div className="ms-3">
                     <h4 className="text-primary">Email Us</h4>
-                    <div style={{display:'flex',alignItems:'center',gap:"10px",justifyContent:"space-between"}}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: "10px", justifyContent: "space-between" }}>
                       <a
-                       
+
                         className="h5"
                         href="mailto:dreamdesignarchitects.here@gmail.com"
                         target="_blank"
                       >
                         Click here
                       </a>
-                      <button className="copy"  onClick={copyEmail}>
+                      <button className="copy" onClick={copyEmail}>
                         <span
                           data-text-end="Copied!"
                           data-text-initial="Copy to clipboard"
@@ -219,44 +219,44 @@ export default function Contact() {
                 data-aos="fade-left"
               >
                 <div className="p-5 rounded contact-form">
-                     <form ref={form} onSubmit={sendEmail}>
-                     <div className="mb-4">
-                    <input
-                      type="text"
-                      name="from_name"
-                      className="form-control border-0 py-3"
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <input
-                      type="email"
-                       name='to_email'
-                      className="form-control border-0 py-3"
-                      placeholder="Your Email"
-                    />
-                  </div>
-                  
-                  <div className="mb-4">
-                    <textarea
-                      className="w-100 form-control border-0 py-3"
-                      rows={6}
-                      name='message'
-                      cols={10}
-                      placeholder="Message"
-                    ></textarea>
-                  </div>
-                  <div className="text-start">
-                    <button
-                    disabled={btnload}
-                      className="btn bg-primary text-white py-3 px-5"
-                      type="submit"
-                    >
-                    {btnload?"loading...":"Send Message "}
-                    </button>
-                  </div>
-                     </form>
-                
+                  <form ref={form} onSubmit={sendEmail}>
+                    <div className="mb-4">
+                      <input
+                        type="text"
+                        name="from_name"
+                        className="form-control border-0 py-3"
+                        placeholder="Your Name"
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <input
+                        type="email"
+                        name='to_email'
+                        className="form-control border-0 py-3"
+                        placeholder="Your Email"
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <textarea
+                        className="w-100 form-control border-0 py-3"
+                        rows={6}
+                        name='message'
+                        cols={10}
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                    <div className="text-start">
+                      <button
+                        disabled={btnload}
+                        className="btn bg-primary text-white py-3 px-5"
+                        type="submit"
+                      >
+                        {btnload ? "loading..." : "Send Message "}
+                      </button>
+                    </div>
+                  </form>
+
                 </div>
               </div>
             </div>

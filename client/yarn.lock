@@ -395,6 +395,11 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.4.tgz#0b92dcc0cc1c81f6f306a381f28e31b1a56536e9"
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
+"@types/animejs@^3.1.11":
+  version "3.1.11"
+  resolved "https://registry.yarnpkg.com/@types/animejs/-/animejs-3.1.11.tgz#15a29bcda3238164500e7608e788ef1044212798"
+  integrity sha512-BIVx60G/eflyqdeKBL4+gZ3L+A0afeo11wo6FpX66bpSUQuI6roei5gYbFaGjbzawOo6hrUVPoDSfS6lwsgn8A==
+
 "@types/json-schema@^7.0.12", "@types/json-schema@^7.0.6":
   version "7.0.14"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.14.tgz#74a97a5573980802f32c8e47b663530ab3b6b7d1"
@@ -757,6 +762,11 @@ ajv@^6.0.0, ajv@^6.12.4:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
+
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -2794,6 +2804,11 @@ yauzl@^2.9.1:
   dependencies:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
+
+yet-another-react-lightbox@^3.15.2:
+  version "3.15.2"
+  resolved "https://registry.yarnpkg.com/yet-another-react-lightbox/-/yet-another-react-lightbox-3.15.2.tgz#4d49a80833dc27271411514cebae8c43941d0a0f"
+  integrity sha512-CtvbdBhpYy4Ip43J2lMcXPp9/jO1qoCMm3GQRwsJY76dEp2hcY5W+sXC7Sk4kU/TU0GJtmMiCNu3daMGRkPzDQ==
 
 yn@3.1.1:
   version "3.1.1"

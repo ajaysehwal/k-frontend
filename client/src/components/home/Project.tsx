@@ -18,7 +18,7 @@ export default function Project() {
                 <div  id="projectbox" >
                     {ProjectData?.map((el:{img:string,heading:string})=>(
                          <div onClick={()=>PageNavigate(`/projects/${el.heading}`)} data-aos="fade-up" className="image-zoom" style={{cursor:'pointer'}}>
-                          <img style={{width:'100%',height:'400px'}} src={el.img} alt="" />
+                          <img loading='lazy' style={{width:'100%',height:'400px'}} src={el.img} alt="" />
                           <p className="image-tag">{el.heading}</p>
                        </div>
                   ))}

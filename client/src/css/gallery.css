@@ -1,9 +1,21 @@
 #gallerydiv{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 20px;
     width: 95%;
     margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#gallerydiv img{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s; 
+}
+#gallerydiv img:hover{
+    transform: scale(1); /* Adjust the scale to control the zoom level */
+
 }
 
 

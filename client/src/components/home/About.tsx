@@ -1,12 +1,13 @@
 import about1 from "../../img/about-1.jpg";
 import about2 from "../../img/about-2.jpg";
+import "../../css/floatingimg.css";
 export default function About() {
   return (
     <div> <div className="container-fluid py-5 my-5">
     <div className="container pt-5">
         <div className="row g-5">
             <div className="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s" data-aos="fade-right">
-                <div className="h-100 position-relative">
+                <div id="floating" className="h-100 position-relative">
                     <img src={about1} className="img-fluid w-75 rounded" alt="" style={{marginBottom: "25%"}}/>
                     <div className="position-absolute w-75" style={{top: "25%", left: "25%"}}>
                         <img src={about2} className="img-fluid w-100 rounded" alt=""/>
@@ -15,7 +16,6 @@ export default function About() {
             </div>
             <div className="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s" data-aos="fade-left">
                 <h5 className="text-primary">About Us</h5>
-                <h1 className="mb-4">About Dream Design Architects And It's Innovative Solutions</h1>
                  <h3 style={{color:"rgb(95, 93, 93)"}}>Hands-on approach</h3>
                 <p className="mb-4">
                 Our team and our principal architects personally oversee each project from start to finish, ensuring that every detail is executed to the highest standards. This level of attention to detail helps to create successful projects and has earned the firm a reputation for excellence and reliability</p>
